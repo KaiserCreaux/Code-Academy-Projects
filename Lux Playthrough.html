@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lux Playthrough</title>
+</head>
+<body>
+<script>
+var user= prompt("Her cooldowns are up on Prismatic Barrier, Lucent Singularity, Light Binding and Final Spark. What skill does Lux use?").toUpperCase();
+switch(user){
+    case 'LIGHT BINDING':
+        var Lighta=prompt("Did you burn their flash?").toUpperCase();
+        var Lightb=prompt("Did you clear the minion wave?").toUpperCase();
+        if((Lighta==='YES') && (Lightb==='YES')){
+            window.alert("You snared them, and have them dead to rights! E, R, E, Auttoattack FTW!");
+        }
+        else if(Lighta==='YES'){
+            window.alert("A stupid minion runs in the way of your blast, and your window of opportunity closes!");
+        }
+        else if(Lightb==='YES'){
+            window.alert("They see your skillshot firing and flash to safety, and your window of opportunity closes!");
+        }
+        else {
+            window.alert("I didn't understand your input. Reload and try again!");
+        }
+        break;
+    case 'PRISMATIC BARRIER':
+        var Prisa=prompt("Are they attacking now?").toUpperCase();
+        var Prisb=prompt("Are you about to go all in?").toUpperCase();
+        if ((Prisa==='YES') || (Prisb==='YES')){
+            window.alert("Tactical decision, summoner!");
+        }
+        else    {
+            window.alert("I don't understand.");
+        }
+        break;    
+    case 'LUCENT SINGULARITY':
+        var Lucea=prompt("Did you immediately detonate your singularity?").toUpperCase();
+        var Luceb=prompt("Are you out of mana because you used Lucent Singularity to farm minions?").toUpperCase();
+        if ((Lucea==='YES')&&(Luceb==='NO')){
+            window.alert("Light them up! You blast them for great damage, and get a few minions in the same shot.");
+        }
+        else if (Prisb==='NO'){
+            window.alert("You waited too long to detonate, and they escape both its blast and your attack. Too bad!");
+        }
+        else {
+            window.alert("You try to shoot, but you are out of mana! They get away! Careful about getting too greedy with minions.");
+        }            
+        break;
+    case 'FINAL SPARK':
+        var Finaa=prompt("Are they illuminated?").toUpperCase();
+        var Finab=prompt("Are they rooted?").toUpperCase();
+        if ((Finaa==='YES')&&(Finab==='YES')){
+            window.alert("Bright decision! You get the kill!");
+        }
+        else if(Finaa==='YES'){
+            window.alert("They get out of the way. You'll get 'em next time--I never think about losing!");
+        }
+        else if(Finab==='YES'){
+            window.alert("Ahh, if only you had them illuminated, then you'd really be doing some damage! Better luck next time!");
+        }
+        else{
+            window.alert("I don't understand your input.");
+        }
+        
+        break;
+    default:
+        window.alert("I don't understand your input.");
+}
+</script>
+</body>
+</html
